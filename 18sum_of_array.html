@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum of array</title>
+</head>
+
+<body>
+    <h2>sum of array</h2>
+    value1 <input type="text" id="txtv1"> <br> value2 <input type="text" id="txtv2"> <br> value3 <input type="text" id="txtv3"> <br>
+    <input type="button" value="sum" onclick="sum()"> <br> Result <input type="text" id="txtResult"> <br>
+</body>
+<script>
+    function sum() {
+        var num = new Array();
+        num[0] = Number(document.getElementById("txtv1").value)
+        num[1] = Number(document.getElementById("txtv2").value)
+        num[2] = Number(document.getElementById("txtv3").value)
+        var s = num[0] + num[1] + num[2];
+        document.getElementById("txtResult").value = s;
+    }
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest</title>
+</head>
+
+<body>
+    <h2>Simple Interest</h2>
+    <form>
+        Amount <input type="text" id="txtv1"> <br> Time <input type="text" id="txtv2"> <br> Rate <input type="text" id="txtv3"><br>
+        <input type="button" value="check" id="btnchechk" onclick="check()"> <br> Simple Interest <input type="text" id="txtv4"> <br>
+    </form>
+
+</body>
+<script>
+    function check() {
+        var a = Number(document.getElementById("txtv1").value);
+        var b = Number(document.getElementById("txtv2").value);
+        var c = Number(document.getElementById("txtv3").value);
+        var si = (a * b * c) / 100;
+        document.getElementById("txtv4").value = si;
+    }
+</script>
+
+</html>

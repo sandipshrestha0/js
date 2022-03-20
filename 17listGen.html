@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shiping list generator</title>
+</head>
+
+<body>
+    <h2>shoping list </h2>
+    <form>
+        Item Name <input type="text" id="txtitem">
+        <input type="button" value="Add" onclick="Add()"> <br>
+        <ul id="mylist"></ul>
+
+    </form>
+</body>
+<script>
+    function Add() {
+        var li = document.createElement("i");
+        var text = document.createTextNode(document.getElementById("txtitem").value);
+        li.appendChild(text);
+        document.getElementById("mylist").appendChild(li);
+        document.getElementById("txtitem").value = " ";
+        document.getElementById("txtitem").focus();
+    }
+</script>
+
+</html>

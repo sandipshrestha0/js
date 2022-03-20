@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="test">
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" value="0">Male</input>
+        <input type="radio" name="gender" value="1">Female</input>
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+<script>
+    function validate(form) {
+    var isChecked = Array.prototype.some.call(form.querySelectorAll('input[name=gender]'),
+     function (radio) {
+        return radio.checked;
+    });
+
+    if (!isChecked) {
+        alert("You must select Male or Female");
+    }
+
+    return isChecked;
+}
+
+document.getElementById('test').addEventListener('submit', function (evt) {
+    if (!validate(evt.target)) {
+        evt.preventDefault();
+    }
+});
+</script>
+</html>

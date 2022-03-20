@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "c:\\xampp\\htdocs\\myFile"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "script language"
+	}
+}

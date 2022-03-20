@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sales</title>
+</head>
+
+<body>
+    <h1>sales</h1>
+    <form>
+        Sales Amount <input type="text" id="txtv1"> <br> Discount <input type="text" id="txtv2">% <br>
+        <input type="button" value="Calulate" onclick="calculate()"> <br> Discount Amount <input type="text" id="txtv3"> <br> Net Amount <input type="text" id="txtv4">
+    </form>
+</body>
+<script>
+    function calculate() {
+        var a = Number(document.getElementById("txtv1").value);
+        var b = Number(document.getElementById("txtv2").value);
+        c = (b / 100) * a;
+        d = a - c;
+        document.getElementById("txtv3").value = c;
+        document.getElementById("txtv4").value = d;
+    }
+</script>
+
+</html>

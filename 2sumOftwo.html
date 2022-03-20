@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum of two no</title>
+</head>
+
+<body>
+    <h2>sum</h2>
+    <form>
+        value 1 <input type="text" id="txtv1"> <br> value 2 <input type="text" id="txtv2"> <br>
+        <input type="button" value="Add" id="btnadd" onclick="Add()"> Result <input type="text" id="txtResult">
+    </form>
+</body>
+<script>
+    function Add() {
+        var a = Number(document.getElementById("txtv1").value);
+        var b = Number(document.getElementById("txtv2").value);
+        var c = a + b;
+        document.getElementById("txtResult").value = c;
+    }
+</script>
+
+</html>

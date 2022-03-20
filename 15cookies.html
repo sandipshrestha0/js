@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+    <style>
+        * {
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cookies</h1>
+    <div>
+        Enter your Name <input type="text" id="txtname"><br>
+        <button id="btnset" onclick="setcookies()">set</button>
+        <button id="btnread" onclick="readcookies()">read</button>
+    </div>
+</body>
+<script>
+    function setcookies() {
+        document.cookie = "name=" + document.getElementById("txtname").value;
+    }
+
+    function readcookies() {
+        var x = document.cookie;
+        var name = x.split("=")[1];
+        document.getElementById("txtname").value = name;
+    }
+</script>
+
+</html>

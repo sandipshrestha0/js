@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 3px;
+        }
+        #btn
+        {
+            margin-left: 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Factorial number</h1>
+    value: <input type="text" id="txtv1"> <br>
+    <button id="btn" onclick="fact()">Factorial</button> <br>
+    result: <input type="text" id="txtv2">
+
+</body>
+
+<script>
+function fact()
+{
+    var f=1;
+    var i ;
+    var n = Number(document.getElementById("txtv1").value);
+   if(n<0)
+   {
+       document.getElementById("txtv2").value="Error!!";
+   }
+   else
+   {
+       for(i=1; i<=n; i++)
+       {
+           f= f *i ;
+       }
+       document.getElementById("txtv2").value=f;
+   }
+}
+</script>
+</html>

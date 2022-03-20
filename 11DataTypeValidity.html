@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>Data type validity</h1>
+    age <input type="text" id="txtage"> <br>
+    <input type="button" value="submit" onclick="sub1()">
+</body>
+<script>
+    function sub1() {
+        var age = document.getElementById("txtage").value;
+        if (isNaN(age)) {
+            alert("please enter numberic value");
+        }
+    }
+</script>
+
+</html>

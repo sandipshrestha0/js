@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong</title>
+</head>
+
+<body>
+    <h1>Armstrong</h1>
+    <form>
+        Enter no <input type="text" id="txtv1"><br>
+        <input type="button" value="Armstrong" id="btnarmstrong" onclick="Armstrong()"> <br> Result <input type="text" id="txtv2">
+    </form>
+</body>
+<script>
+    function Armstrong() {
+        var a = Number(document.getElementById("txtv1").value);
+        var s = 0;
+        var r = 0;
+        while (a > 0) {
+            r = a % 10;
+            s = s + r * r * r;
+            a = Math.floor(a / 10);
+        }
+        document.getElementById("txtv2").value = s;
+
+    }
+</script>
+
+</html>
